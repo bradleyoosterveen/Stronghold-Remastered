@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stronghold"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Stronghold Remastered" Height="450" Width="800" WindowState="Maximized" Background="#FF0B0014">
     <Grid>
+        <ContentControl x:Name="App" Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
     </Grid>
 </Window>

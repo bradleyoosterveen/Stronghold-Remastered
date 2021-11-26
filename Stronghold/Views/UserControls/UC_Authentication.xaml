@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Stronghold.Views.UserControls.UC_Authentication"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Stronghold.Views.UserControls"
+             mc:Ignorable="d" d:DesignWidth="530">
+    <Grid Background="#FF0B0014" HorizontalAlignment="Center" VerticalAlignment="Center" Width="530" Height="368">
+        <Label Content="Username" HorizontalAlignment="Left" Margin="12,94,0,0" VerticalAlignment="Top" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="UsernameInput" Margin="12,133,12,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="" Padding="20,0,0,0" VerticalContentAlignment="Center" Height="48" BorderBrush="{x:Null}" Background="#FF190F21" Foreground="#FFF5E9E2" SelectionTextBrush="#FFF5E9E2"/>
+        <Label Content="Security token" HorizontalAlignment="Left" Margin="12,198,0,0" VerticalAlignment="Top" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
+        <PasswordBox x:Name="SecurityTokenInput" Margin="12,237,12,0" VerticalAlignment="Top" FontSize="18" Padding="20,0,0,0" VerticalContentAlignment="Center" Height="48" BorderBrush="{x:Null}" Background="#FF190F21" Foreground="#FFF5E9E2" SelectionTextBrush="#FFF5E9E2"/>
+        <Button Content="Sign in" HorizontalAlignment="Center" Margin="0,303,0,0" VerticalAlignment="Top" Width="506" Height="48" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FFF5E9E2" Background="#FFD44D5C" HorizontalContentAlignment="Left" Padding="18,1,1,1" Click="SignInButton_Click"/>
+        <WrapPanel Margin="0,18,0,292" HorizontalAlignment="Center" Width="416">
+            <Label Content="Welcome to" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold"/>
+            <Label Content="Stronghold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD44D5C" FontSize="36" FontWeight="Bold" Height="58" Width="193" Padding="5,5,0,5"/>
+            <Label Content="." HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold" Width="9" Padding="0,5,0,5"/>
+        </WrapPanel>
+
+    </Grid>
+</UserControl>

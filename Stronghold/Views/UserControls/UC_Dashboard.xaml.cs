@@ -12,20 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Stronghold.Views.UserControls;
+using Utility;
 
-namespace Stronghold
+namespace Stronghold.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UC_Dashboard.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UC_Dashboard : UserControl
     {
-        public MainWindow()
+        public UC_Dashboard()
         {
             InitializeComponent();
 
-            this.App.Content = new UC_Authentication();
+            this.CurrentUsername.Content = Authentication.Username;
+        }
+
+        private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
