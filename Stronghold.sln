@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stronghold", "Stronghold\Stronghold.csproj", "{EF1C7914-B823-4A45-8B2F-BE1CD088425E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stronghold", "Stronghold\Stronghold.csproj", "{EF1C7914-B823-4A45-8B2F-BE1CD088425E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{81476CC4-A511-432B-8729-4A4820CD0DB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{81476CC4-A511-432B-8729-4A4820CD0DB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{5E9DC961-4B7F-4A3A-9318-CA8586347F6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Controller\Controller.csproj", "{5E9DC961-4B7F-4A3A-9318-CA8586347F6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{36AF9328-3BC3-4A97-A37C-92E872C9FB6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "Utility\Utility.csproj", "{36AF9328-3BC3-4A97-A37C-92E872C9FB6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{633CD63F-59C1-401F-A3EC-FF66802D8ED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityTest", "UtilityTest\UtilityTest.csproj", "{F2145695-C92C-4898-855A-BF33543323B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{36AF9328-3BC3-4A97-A37C-92E872C9FB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36AF9328-3BC3-4A97-A37C-92E872C9FB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36AF9328-3BC3-4A97-A37C-92E872C9FB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2145695-C92C-4898-855A-BF33543323B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2145695-C92C-4898-855A-BF33543323B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2145695-C92C-4898-855A-BF33543323B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2145695-C92C-4898-855A-BF33543323B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2145695-C92C-4898-855A-BF33543323B3} = {633CD63F-59C1-401F-A3EC-FF66802D8ED7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {947EFDB0-6B64-40F9-882D-590BA3723D08}
