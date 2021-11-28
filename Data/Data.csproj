@@ -6,10 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Utility\Utility.csproj" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
 </Project>

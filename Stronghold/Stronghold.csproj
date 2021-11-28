@@ -9,7 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Images\" />
+    <None Remove="Resources\Images\Background_Without_Logo.jpg" />
+    <None Remove="Resources\Images\Background_With_Logo.jpg" />
+    <None Remove="Resources\Images\Logo.ico" />
+    <None Remove="Resources\Images\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,18 +25,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\Images\Background_Without_Logo.jpg">
+    <Resource Include="Resources\Images\Background_Without_Logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Images\Background_With_Logo.jpg">
+    </Resource>
+    <Resource Include="Resources\Images\Background_With_Logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Images\Logo.ico">
+    </Resource>
+    <Resource Include="Resources\Images\Logo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Images\Logo.png">
+    </Resource>
+    <Resource Include="Resources\Images\Logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,5 @@
         Title="Stronghold Remastered" Height="450" Width="800" WindowState="Maximized" Background="#FF0B0014">
     <Grid>
         <ContentControl x:Name="App" Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-
     </Grid>
 </Window>
