@@ -12,6 +12,6 @@
             <Label x:Name="CurrentUsername" Content="Stronghold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD44D5C" FontSize="36" FontWeight="Bold" Height="58" Padding="5,5,0,5"/>
             <Label Content="." HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold" Width="9" Padding="0,5,0,5"/>
         </WrapPanel>
-        <Button Content="New landmark" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" Width="506" Height="48" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="#FFF5E9E2" Background="#FFD44D5C" HorizontalContentAlignment="Left" Padding="18,1,1,1" Click="NewLandmarkButton_Click"/>
+        <Button Style="{StaticResource PrimaryButton}" Content="New landmark" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" Width="506" Padding="18,1,1,1" Click="NewLandmarkButton_Click"/>
     </Grid>
 </UserControl>
