@@ -8,6 +8,7 @@ namespace Model
 {
     public class Role : BaseModel
     {
+        public static readonly string Table = "Role";
         public int ID { get; set; }
         public string Description { get; set; }
 

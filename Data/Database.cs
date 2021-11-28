@@ -20,7 +20,7 @@ namespace Data
             _connectionString.InitialCatalog = DotNetEnv.Env.GetString("DB_Database");
             return _connectionString.ConnectionString;
         }
-        private static void EnsureConnection()
+        public static void EnsureConnection()
         {
             ConnectionString();
             if (_connection == null)
