@@ -14,6 +14,8 @@ namespace Model
         public string SecurityToken { get; set; }
         public Role Role { get; set; }
 
+        public User(){}
+
         public User(int id, string username, string securityToken, Role role)
         {
             this.ID = id;

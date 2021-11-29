@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Data;
 using Stronghold.Views.UserControls;
 
 namespace Stronghold
@@ -24,6 +25,9 @@ namespace Stronghold
         public MainWindow()
         {
             InitializeComponent();
+
+            DotNetEnv.Env.TraversePath().Load();
+            Database.Initialize();
 
             this.App.Content = new UC_Authentication();
         }

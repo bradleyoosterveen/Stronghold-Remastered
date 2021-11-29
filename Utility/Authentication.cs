@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,16 @@ namespace Utility
 {
     public static class Authentication
     {
-        public static string Username { get; private set; }
+        public static User User { get; private set; }
 
-        public static void New(string username)
+        public static void New(User user)
         {
-            Authentication.Username = username;
+            Authentication.User = user;
+        }
+
+        public static void Dispose()
+        {
+            Authentication.User = null;
         }
     }
 }

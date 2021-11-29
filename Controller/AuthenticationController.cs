@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Utility;
 using Data;
+using Model;
+using SqlKata.Execution;
 
 namespace Controller
 {
@@ -21,9 +23,26 @@ namespace Controller
             if (securityToken is "" or null)
                 return new Feedback(Feedback.Type.Error, "Security token can not be empty.");
 
-            Authentication.New(username);
+            IEnumerable<User> users = Database.QueryFactory.Query("User").Where("Username", "=", username).Get<User>();
 
-            return null;
+            if (!users.Any())
+                return new Feedback(Feedback.Type.Error, "You have entered the wrong credentials.");
+
+            User user = users.First();
+
+            if (user.SecurityToken != securityToken)
+                return new Feedback(Feedback.Type.Error, "You have entered the wrong credentials.");
+
+            Authentication.New(user);
+
+            return new Feedback(Feedback.Type.Success, "You are now signed in.");
+        }
+
+        public Feedback SignOut()
+        {
+            Authentication.Dispose();
+
+            return new Feedback(Feedback.Type.Success, "You are now signed out.");
         }
     }
 }
