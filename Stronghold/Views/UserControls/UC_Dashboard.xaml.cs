@@ -25,7 +25,7 @@ namespace Stronghold.Views.UserControls
         {
             InitializeComponent();
 
-            this.CurrentUsername.Content = Authentication.Username;
+            this.CurrentUsername.Content = Authentication.User.Username;
         }
 
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)

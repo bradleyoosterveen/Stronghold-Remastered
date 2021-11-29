@@ -39,13 +39,13 @@ namespace Stronghold.Views.UserControls
 
             Feedback feedback = this.AuthenticationController.SignIn(request);
 
-            if (feedback != null)
+            if (feedback.MessageType == Feedback.Type.Success)
             {
-                MessageBox.Show(feedback.Message);
+                this.Content = new UC_Dashboard();
             }
             else
             {
-                this.Content = new UC_Dashboard();
+                MessageBox.Show(feedback.Message);
             }
         }
     }
