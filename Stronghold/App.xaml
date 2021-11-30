@@ -13,6 +13,7 @@
             <Setter Property="Foreground" Value="#FFF5E9E2"/>
             <Setter Property="Background" Value="#FFD44D5C"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="18,1"/>
         </Style>
     </Application.Resources>
 </Application>

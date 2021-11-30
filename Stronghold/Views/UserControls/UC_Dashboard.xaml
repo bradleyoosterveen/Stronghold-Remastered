@@ -5,13 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Stronghold.Views.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="506" Width="506">
+             d:DesignHeight="450" d:DesignWidth="506">
     <Grid>
-        <WrapPanel Margin="0,18,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Label Content="Welcome" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold"/>
-            <Label x:Name="CurrentUsername" Content="Stronghold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD44D5C" FontSize="36" FontWeight="Bold" Height="58" Padding="5,5,0,5"/>
-            <Label Content="." HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold" Width="9" Padding="0,5,0,5"/>
-        </WrapPanel>
-        <Button Style="{StaticResource PrimaryButton}" Content="New landmark" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" Width="506" Padding="18,1,1,1" Click="NewLandmarkButton_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0,0,0,22">
+            <StackPanel VerticalAlignment="Center" Margin="12">
+                <Button Style="{StaticResource PrimaryButton}" Content="Sign out" VerticalAlignment="Top" Click="SignOutButton_Click" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Width="506" VerticalAlignment="Stretch">
+            <StackPanel>
+                <StackPanel Margin="0,0,0,22">
+                    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Label Content="Welcome" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold"/>
+                        <Label x:Name="CurrentUsername" Content="Stronghold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD44D5C" FontSize="36" FontWeight="Bold" Height="58" Padding="5,5,0,5"/>
+                        <Label Content="." HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold" Width="9" Padding="0,5,0,5"/>
+                    </WrapPanel>
+                </StackPanel>
+                <StackPanel>
+                    <Button Style="{StaticResource PrimaryButton}" Content="New landmark" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="NewLandmarkButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

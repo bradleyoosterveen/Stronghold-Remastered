@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controller;
 using Utility;
 
 namespace Stronghold.Views.UserControls
@@ -21,6 +22,8 @@ namespace Stronghold.Views.UserControls
     /// </summary>
     public partial class UC_Dashboard : UserControl
     {
+        private AuthenticationController AuthenticationController = new AuthenticationController();
+
         public UC_Dashboard()
         {
             InitializeComponent();
@@ -31,6 +34,16 @@ namespace Stronghold.Views.UserControls
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void SignOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Feedback feedback = this.AuthenticationController.SignOut();
+
+            if (feedback.MessageType == Feedback.Type.Success)
+            {
+                this.Content = new UC_Authentication();
+            }
         }
     }
 }
