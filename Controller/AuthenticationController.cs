@@ -40,6 +40,9 @@ namespace Controller
 
         public Feedback SignOut()
         {
+            if (Authentication.User == null)
+                return new Feedback(Feedback.Type.Error, "How..?");
+
             Authentication.Dispose();
 
             return new Feedback(Feedback.Type.Success, "You are now signed out.");
