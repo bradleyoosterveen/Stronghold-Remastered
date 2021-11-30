@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{633CD63F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilityTest", "UtilityTest\UtilityTest.csproj", "{F2145695-C92C-4898-855A-BF33543323B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{A2A116B5-E28C-40AF-86F7-C7BDEEB1D0B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{A2A116B5-E28C-40AF-86F7-C7BDEEB1D0B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTest", "DataTest\DataTest.csproj", "{401DB0A5-31AE-49B4-BA70-EFD171E6BE2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonTests", "DataTest\CommonTests.csproj", "{401DB0A5-31AE-49B4-BA70-EFD171E6BE2B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7E7A2784-1B4E-49D0-864C-70DCB4C826F9}"
 	ProjectSection(SolutionItems) = preProject

@@ -22,23 +22,43 @@ namespace Stronghold.Views.UserControls
     /// </summary>
     public partial class UC_Dashboard : UserControl
     {
-        private AuthenticationController AuthenticationController = new AuthenticationController();
+        private AuthenticationController authenticationController = new();
+        private LandmarkController landmarkController = new();
+
+        private Window_CreateLandmark windowCreateLandmark = new();
 
         public UC_Dashboard()
         {
             InitializeComponent();
 
             this.CurrentUsername.Content = Authentication.User.Username;
+
+            this.SubscribeToEvents();
+        }
+
+        public void GetData()
+        {
+
+        }
+
+        public void SubscribeToEvents()
+        {
+            this.windowCreateLandmark.LandmarkCreated += this.OnLandmarkCreated;
+        }
+
+        public void OnLandmarkCreated(object sender, EventArgs e)
+        {
+            this.GetData();
         }
 
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
         {
-
+            windowCreateLandmark.Show();
         }
 
         private void SignOutButton_Click(object sender, RoutedEventArgs e)
         {
-            Feedback feedback = this.AuthenticationController.SignOut();
+            Feedback feedback = this.authenticationController.SignOut();
 
             if (feedback.MessageType == Feedback.Type.Success)
             {
