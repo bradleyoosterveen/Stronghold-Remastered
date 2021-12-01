@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stronghold.Views"
         mc:Ignorable="d"
-        Title="Window_CreateLandmark" Height="450" Width="800" Closing="OnClosing" Background="#FF0B0014">
+        Title="Window_CreateLandmark" Width="530" Closing="OnClosing" Background="#FF0B0014">
     <Grid Margin="12">
         <StackPanel>
             <StackPanel Margin="0,0,0,12">
@@ -15,11 +15,37 @@
                     <Label Content="." HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF5E9E2" FontSize="36" FontWeight="Bold" Width="9" Padding="0,5,0,5"/>
                 </WrapPanel>
             </StackPanel>
+            <StackPanel Margin="0,0,0,18">
+                <Label Content="World" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
+                <TextBox Style="{StaticResource PrimaryTextBox}" x:Name="WorldInput" Text=""/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,18">
+                <Label Content="Description" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
+                <TextBox Style="{StaticResource PrimaryTextBox}" x:Name="DescriptionInput" Text=""/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,18">
+                <Label Content="Coördinates" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                    </Grid>
+                </Grid>
+            </StackPanel>
             <StackPanel>
-                <Label Content="Username" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
-                <TextBox Style="{StaticResource PrimaryTextBox}" x:Name="UsernameInput" Text=""/>
+                <Button Style="{StaticResource PrimaryButton}" Content="Create landmark" Click="CreateLandmarkButton_Clicked"/>
             </StackPanel>
         </StackPanel>
-
     </Grid>
 </Window>
