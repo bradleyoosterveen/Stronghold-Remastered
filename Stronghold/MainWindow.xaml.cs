@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Data;
 using Stronghold.Views.UserControls;
+using Utility;
 
 namespace Stronghold
 {
@@ -27,9 +28,20 @@ namespace Stronghold
             InitializeComponent();
 
             DotNetEnv.Env.TraversePath().Load();
-            Database.Initialize();
+
+            Feedback databaseFeedback = Database.Initialize();
+
+            if (databaseFeedback.MessageType == Feedback.Type.Error)
+                this.ShowError(databaseFeedback.Message);
 
             this.App.Content = new UC_Authentication();
+        }
+        public void ShowError(string message)
+        {
+            MessageBoxResult result = MessageBox.Show(message);
+
+            if (result == MessageBoxResult.OK)
+                this.Close();
         }
     }
 }

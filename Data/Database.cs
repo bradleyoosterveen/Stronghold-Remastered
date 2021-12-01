@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using SqlKata;
 using SqlKata.Compilers;
 using SqlKata.Execution;
+using Utility;
 
 namespace Data
 {
@@ -13,10 +14,10 @@ namespace Data
         public static SqlServerCompiler SqlServerCompiler;
         public static QueryFactory QueryFactory;
 
-        public static void Initialize()
+        public static Feedback Initialize()
         {
             if (DotNetEnv.Env.GetString("DB_Host") == null)
-                return;
+                return new Feedback(Feedback.Type.Error, "Could not connect to the database.");
 
             SqlConnectionStringBuilder cs = new SqlConnectionStringBuilder();
             cs.DataSource = DotNetEnv.Env.GetString("DB_Host");
@@ -29,6 +30,8 @@ namespace Data
             Database.SqlServerCompiler = new SqlServerCompiler();
 
             Database.QueryFactory = new QueryFactory(Database.SqlConnection, Database.SqlServerCompiler);
+
+            return null;
         }
     }
 }
