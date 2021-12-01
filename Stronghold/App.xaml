@@ -15,5 +15,20 @@
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
             <Setter Property="Padding" Value="18,1"/>
         </Style>
+        <!-- Input -->
+        <Style TargetType="TextBox" x:Key="PrimaryTextBox">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="20,12"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Background" Value="#FF190F21"/>
+            <Setter Property="Foreground" Value="#FFF5E9E2"/>
+        </Style>
+        <Style TargetType="PasswordBox" x:Key="PrimaryPasswordBox">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="20,12"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Background" Value="#FF190F21"/>
+            <Setter Property="Foreground" Value="#FFF5E9E2"/>
+        </Style>
     </Application.Resources>
 </Application>

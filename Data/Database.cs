@@ -15,6 +15,9 @@ namespace Data
 
         public static void Initialize()
         {
+            if (DotNetEnv.Env.GetString("DB_Host") == null)
+                return;
+
             SqlConnectionStringBuilder cs = new SqlConnectionStringBuilder();
             cs.DataSource = DotNetEnv.Env.GetString("DB_Host");
             cs.UserID = DotNetEnv.Env.GetString("DB_User");
