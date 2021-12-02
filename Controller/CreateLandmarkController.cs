@@ -10,8 +10,14 @@ using Utility;
 
 namespace Controller
 {
-    public class LandmarkController : Controller
+    public class CreateLandmarkController : Controller
     {
+        public IEnumerable<Dimension> GetDimensions()
+        {
+            IEnumerable<Dimension> dimensions = Database.QueryFactory.Query(Dimension.Table).Get<Dimension>();
+
+            return dimensions;
+        }
         public Feedback InsertLandmark(Request request)
         {
             if (Authentication.User == null)

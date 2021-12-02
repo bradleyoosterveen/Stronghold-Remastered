@@ -54,5 +54,10 @@
             <Setter Property="Background" Value="#FF190F21"/>
             <Setter Property="Foreground" Value="#FFF5E9E2"/>
         </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="SelectedIndex" Value="0"/>
+            <Setter Property="SelectedValuePath" Value="Key"/>
+            <Setter Property="DisplayMemberPath" Value="Value"/>
+        </Style>
     </Application.Resources>
 </Application>

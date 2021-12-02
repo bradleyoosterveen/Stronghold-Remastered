@@ -23,7 +23,6 @@ namespace Stronghold.Views.UserControls
     public partial class UC_Dashboard : UserControl
     {
         private readonly AuthenticationController _authenticationController = new();
-        private readonly LandmarkController _landmarkController = new();
 
         private readonly Window_CreateLandmark _windowCreateLandmark = new();
 

@@ -16,8 +16,10 @@
                 </WrapPanel>
             </StackPanel>
             <StackPanel Margin="0,0,0,18">
-                <Label Content="World" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
-                <TextBox Style="{StaticResource PrimaryTextBox}" x:Name="WorldInput" Text=""/>
+                <Label Content="Dimension" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
+                <!-- <TextBox Style="{StaticResource PrimaryTextBox}" x:Name="DimensionInput" Text=""/> -->
+                <ComboBox Name="DimensionInput">
+                </ComboBox>
             </StackPanel>
             <StackPanel Margin="0,0,0,18">
                 <Label Content="Description" Foreground="#FFF5E9E2" FontSize="18" FontWeight="Bold"/>
@@ -35,19 +37,19 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                        <TextBox Style="{StaticResource PrimaryTextBox}" Name="XInput"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Label Content="/" HorizontalContentAlignment="Center"/>
                     </Grid>
                     <Grid Grid.Column="2">
-                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                        <TextBox Style="{StaticResource PrimaryTextBox}" Name="YInput"/>
                     </Grid>
                     <Grid Grid.Column="3">
                         <Label Content="/" HorizontalContentAlignment="Center"/>
                     </Grid>
                     <Grid Grid.Column="4">
-                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                        <TextBox Style="{StaticResource PrimaryTextBox}" Name="ZInput"/>
                     </Grid>
                 </Grid>
             </StackPanel>
