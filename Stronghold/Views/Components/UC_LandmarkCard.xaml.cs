@@ -21,7 +21,8 @@ namespace Stronghold.Views.Components
     /// </summary>
     public partial class UC_LandmarkCard : UserControl
     {
-        public event EventHandler ViewLandmark;
+        public event EventHandler DeleteLandmark;
+        public event EventHandler EditLandmark;
 
         private readonly Landmark _landmark;
 
@@ -32,6 +33,9 @@ namespace Stronghold.Views.Components
             this._landmark = landmark;
 
             this.SetLabels();
+
+            // @TODO: Edit landmark 
+            // @TODO: Delete landmark ((StackPanel)this.Parent).Children.Remove(this);
         }
 
         public void SetLabels()
