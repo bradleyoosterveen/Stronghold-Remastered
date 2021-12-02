@@ -38,7 +38,6 @@ namespace Stronghold.Views.Components
         {
             this.DimensionLabel.Content = this._landmark.Dimension.Description;
             this.DescriptionLabel.Content = this._landmark.Description;
-            this.OwnerLabel.Content = this._landmark.Owner.Username;
             this.CoordinatesLabel.Content = $"{this._landmark.X}/{this._landmark.Y}/{this._landmark.Z}";
         }
     }

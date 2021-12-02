@@ -11,6 +11,8 @@
   <ItemGroup>
     <None Remove="Resources\Images\Background_Without_Logo.jpg" />
     <None Remove="Resources\Images\Background_With_Logo.jpg" />
+    <None Remove="Resources\Images\DeleteIcon.png" />
+    <None Remove="Resources\Images\EditIcon.png" />
     <None Remove="Resources\Images\Logo.ico" />
     <None Remove="Resources\Images\Logo.png" />
   </ItemGroup>
@@ -31,6 +33,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\Background_With_Logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\DeleteIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\EditIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\Logo.ico">
