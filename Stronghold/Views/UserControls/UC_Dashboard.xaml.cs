@@ -59,6 +59,11 @@ namespace Stronghold.Views.UserControls
 
         private void SignOutButton_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult msgBoxResult = MessageBox.Show("Are you sure you want to log out?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (msgBoxResult != MessageBoxResult.Yes)
+                return;
+
             Feedback feedback = this.authenticationController.SignOut();
 
             if (feedback.MessageType == Feedback.Type.Success)
