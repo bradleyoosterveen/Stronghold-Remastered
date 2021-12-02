@@ -20,7 +20,7 @@
 
             <Label Grid.Column="0" Content="Dimension" Name="DimensionLabel" HorizontalAlignment="Left" FontWeight="Normal"/>
             <WrapPanel Grid.Column="1" FlowDirection="RightToLeft" VerticalAlignment="Center">
-                <Image Source="../../Resources/Images/DeleteIcon.png" Height="16" Margin="0,0,18,0"/>
+                <Image Source="../../Resources/Images/DeleteIcon.png" Height="16" Margin="6,0,18,0"/>
                 <Image Source="../../Resources/Images/EditIcon.png" Height="16"/>
             </WrapPanel>
         </Grid>
