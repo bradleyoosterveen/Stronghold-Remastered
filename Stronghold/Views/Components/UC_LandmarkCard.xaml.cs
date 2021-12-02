@@ -40,5 +40,15 @@ namespace Stronghold.Views.Components
             this.DescriptionLabel.Content = this._landmark.Description;
             this.CoordinatesLabel.Content = $"{this._landmark.X}/{this._landmark.Y}/{this._landmark.Z}";
         }
+
+        private void UserControl_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.Buttons.Visibility = Visibility.Visible;
+        }
+
+        private void UserControl_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.Buttons.Visibility = Visibility.Hidden;
+        }
     }
 }
