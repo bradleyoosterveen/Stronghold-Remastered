@@ -22,10 +22,10 @@ namespace Stronghold.Views.UserControls
     /// </summary>
     public partial class UC_Dashboard : UserControl
     {
-        private AuthenticationController authenticationController = new();
-        private LandmarkController landmarkController = new();
+        private readonly AuthenticationController _authenticationController = new();
+        private readonly LandmarkController _landmarkController = new();
 
-        private Window_CreateLandmark windowCreateLandmark = new();
+        private readonly Window_CreateLandmark _windowCreateLandmark = new();
 
         public UC_Dashboard()
         {
@@ -43,7 +43,7 @@ namespace Stronghold.Views.UserControls
 
         public void SubscribeToEvents()
         {
-            this.windowCreateLandmark.LandmarkCreated += this.OnLandmarkCreated;
+            this._windowCreateLandmark.LandmarkCreated += this.OnLandmarkCreated;
         }
 
         public void OnLandmarkCreated(object sender, EventArgs e)
@@ -53,8 +53,8 @@ namespace Stronghold.Views.UserControls
 
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
         {
-            windowCreateLandmark.Show();
-            windowCreateLandmark.Activate();
+            this._windowCreateLandmark.Show();
+            this._windowCreateLandmark.Activate();
         }
 
         private void SignOutButton_Click(object sender, RoutedEventArgs e)
@@ -64,7 +64,7 @@ namespace Stronghold.Views.UserControls
             if (msgBoxResult != MessageBoxResult.Yes)
                 return;
 
-            Feedback feedback = this.authenticationController.SignOut();
+            Feedback feedback = this._authenticationController.SignOut();
 
             if (feedback.MessageType == Feedback.Type.Success)
             {
