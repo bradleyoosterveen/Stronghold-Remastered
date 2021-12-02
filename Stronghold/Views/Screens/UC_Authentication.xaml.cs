@@ -16,7 +16,7 @@ using Controller;
 using Stronghold.Resources.Styling;
 using Utility;
 
-namespace Stronghold.Views.UserControls
+namespace Stronghold.Views.Screens
 {
     /// <summary>
     /// Interaction logic for UC_AccessCard.xaml

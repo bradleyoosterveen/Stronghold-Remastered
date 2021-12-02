@@ -38,9 +38,9 @@ namespace DataTest
         }
 
         [Test]
-        public void Test_LandmarkController_InsertLandmark()
+        public void Test_CreateLandmarkController_InsertLandmark()
         {
-            LandmarkController landmarkController = new LandmarkController();
+            CreateLandmarkController createLandmarkController = new CreateLandmarkController();
 
             Request request = new Request();
 
@@ -50,7 +50,7 @@ namespace DataTest
             request.AddData("y", 65);
             request.AddData("z", 452);
 
-            Feedback feedback = landmarkController.InsertLandmark(request);
+            Feedback feedback = createLandmarkController.InsertLandmark(request);
 
             if (feedback.MessageType == Feedback.Type.Success)
             {
@@ -60,6 +60,18 @@ namespace DataTest
             {
                 Assert.Fail();
             }
+        }
+
+        [Test]
+        public void Test_DashboardController_GetLandmarks()
+        {
+            DashboardController dashboardController = new();
+
+            List<Landmark> landmarks = dashboardController.GetLandmarks();
+
+            Landmark landmark = landmarks.First();
+
+            Assert.IsNotNull(landmark.Dimension);
         }
     }
 }

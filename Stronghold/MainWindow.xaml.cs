@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Data;
-using Stronghold.Views.UserControls;
+using Stronghold.Views.Screens;
 using Utility;
 
 namespace Stronghold

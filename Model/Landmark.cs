@@ -12,10 +12,12 @@ namespace Model
         public int ID { get; set; }
         public string Description { get; set; }
         public int Dimension_ID { get; set; }
+        public Dimension Dimension { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
         public int Z { get; set; }
         public int Owner_ID { get; set; }
+        public User Owner { get; set; }
 
         public Landmark() { }
         public Landmark(int id, string description, int dimension_id, int x, int y, int z, int owner_id)

@@ -13,9 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Controller;
+using Model;
+using Stronghold.Views.Components;
 using Utility;
 
-namespace Stronghold.Views.UserControls
+namespace Stronghold.Views.Screens
 {
     /// <summary>
     /// Interaction logic for UC_Dashboard.xaml
@@ -23,6 +25,7 @@ namespace Stronghold.Views.UserControls
     public partial class UC_Dashboard : UserControl
     {
         private readonly AuthenticationController _authenticationController = new();
+        private readonly DashboardController _dashboardController = new();
 
         private readonly Window_CreateLandmark _windowCreateLandmark = new();
 
@@ -33,18 +36,22 @@ namespace Stronghold.Views.UserControls
             this.CurrentUsername.Content = Authentication.User.Username;
 
             this.SubscribeToEvents();
+
+            this.UpdateList();
         }
 
         public void UpdateList()
         {
-            this.GetData();
+            this.LandmarkList.Children.Clear();
 
-            // @TODO: Add items to list
-        }
+            foreach (Landmark landmark in this._dashboardController.GetLandmarks())
+            {
+                UC_LandmarkCard landmarkCard = new UC_LandmarkCard(landmark);
 
-        public void GetData()
-        {
-            // @TODO: Get landmark data
+                this.LandmarkList.Children.Add(landmarkCard);
+
+                landmarkCard.ViewLandmark += this.OnViewLandmark;
+            }
         }
 
         public void SubscribeToEvents()
@@ -55,6 +62,11 @@ namespace Stronghold.Views.UserControls
         public void OnLandmarkCreated(object sender, EventArgs e)
         {
             this.UpdateList();
+        }
+
+        public void OnViewLandmark(object sender, EventArgs e)
+        {
+            
         }
 
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
