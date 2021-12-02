@@ -36,9 +36,16 @@ namespace Stronghold.Views.UserControls
             this.SubscribeToEvents();
         }
 
+        public void UpdateList()
+        {
+            this.GetData();
+
+            // @TODO: Add items to list
+        }
+
         public void GetData()
         {
-
+            // @TODO: Get landmark data
         }
 
         public void SubscribeToEvents()
@@ -48,7 +55,7 @@ namespace Stronghold.Views.UserControls
 
         public void OnLandmarkCreated(object sender, EventArgs e)
         {
-            this.GetData();
+            this.UpdateList();
         }
 
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
