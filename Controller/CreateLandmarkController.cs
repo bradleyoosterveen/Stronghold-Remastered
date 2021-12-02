@@ -12,11 +12,11 @@ namespace Controller
 {
     public class CreateLandmarkController : Controller
     {
-        public IEnumerable<Dimension> GetDimensions()
+        public List<Dimension> GetDimensions()
         {
             IEnumerable<Dimension> dimensions = Database.QueryFactory.Query(Dimension.Table).Get<Dimension>();
 
-            return dimensions;
+            return dimensions.ToList();
         }
         public Feedback InsertLandmark(Request request)
         {
