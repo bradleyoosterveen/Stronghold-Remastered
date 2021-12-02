@@ -43,8 +43,24 @@ namespace Stronghold.Views
             }
         }
 
+        public bool FieldsAreEmpty()
+        {
+            if (this.DescriptionInput.Text is "" or null) return true;
+            if (this.XInput.Text is "" or null) return true;
+            if (this.YInput.Text is "" or null) return true;
+            if (this.ZInput.Text is "" or null) return true;
+
+            return false;
+        }
+
         private void CreateLandmarkButton_Clicked(object sender, RoutedEventArgs e)
         {
+            if (FieldsAreEmpty())
+            {
+                MessageBox.Show("Not all fields are filled in");
+                return;
+            }
+
             int dimension = ((KeyValuePair<int, string>)this.DimensionInput.SelectionBoxItem).Key;
             string description = this.DescriptionInput.Text;
             int x = int.Parse(this.XInput.Text);
