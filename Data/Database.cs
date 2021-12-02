@@ -31,7 +31,7 @@ namespace Data
 
             Database.QueryFactory = new QueryFactory(Database.SqlConnection, Database.SqlServerCompiler);
 
-            return null;
+            return new Feedback(Feedback.Type.Success, "Successfully connected to the database.");
         }
     }
 }

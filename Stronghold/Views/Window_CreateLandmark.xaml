@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stronghold.Views"
         mc:Ignorable="d"
-        Title="Window_CreateLandmark" Width="530" Closing="OnClosing" Background="#FF0B0014">
-    <Grid Margin="12">
+        Title="Window_CreateLandmark" Closing="OnClosing" Style="{StaticResource Modal}" WindowStartupLocation="CenterScreen">
+    <Grid Margin="12" Width="530">
         <StackPanel>
             <StackPanel Margin="0,0,0,12">
                 <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -28,7 +28,9 @@
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
+                        <ColumnDefinition Width="24"/>
                         <ColumnDefinition/>
+                        <ColumnDefinition Width="24"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
@@ -36,15 +38,24 @@
                         <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
                     </Grid>
                     <Grid Grid.Column="1">
-                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                        <Label Content="/" HorizontalContentAlignment="Center"/>
                     </Grid>
                     <Grid Grid.Column="2">
                         <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
                     </Grid>
+                    <Grid Grid.Column="3">
+                        <Label Content="/" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="4">
+                        <TextBox Style="{StaticResource PrimaryTextBox}" Text=""/>
+                    </Grid>
                 </Grid>
             </StackPanel>
-            <StackPanel>
+            <StackPanel Margin="0,0,0,18">
                 <Button Style="{StaticResource PrimaryButton}" Content="Create landmark" Click="CreateLandmarkButton_Clicked"/>
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{StaticResource SecondaryButton}" Content="Cancel" Click="CancelButton_Clicked"/>
             </StackPanel>
         </StackPanel>
     </Grid>

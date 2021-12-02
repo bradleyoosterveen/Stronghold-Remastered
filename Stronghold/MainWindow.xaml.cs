@@ -43,5 +43,10 @@ namespace Stronghold
             if (result == MessageBoxResult.OK)
                 this.Close();
         }
+
+        private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

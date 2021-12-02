@@ -27,8 +27,13 @@ namespace Stronghold.Views
 
         private void CreateLandmarkButton_Clicked(object sender, RoutedEventArgs e)
         {
-            this.LandmarkCreated.Invoke(this, null);
+            this.LandmarkCreated?.Invoke(this, null);
 
+            this.Hide();
+        }
+
+        private void CancelButton_Clicked(object sender, RoutedEventArgs e)
+        {
             this.Hide();
         }
 

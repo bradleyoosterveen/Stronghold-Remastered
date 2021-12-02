@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:Stronghold"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- Windows -->
+        <!-- # Popup -->
+        <Style TargetType="Window" x:Key="Modal">
+            <Setter Property="ResizeMode" Value="NoResize"/>
+            <Setter Property="Background" Value="#FF0B0014"/>
+            <Setter Property="SizeToContent" Value="WidthAndHeight"/>
+        </Style>
+        <!-- Labels -->
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="#FFF5E9E2"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
         <!-- Buttons -->
         <Style TargetType="Button" x:Key="PrimaryButton">
             <Setter Property="Height" Value="48"/>
@@ -12,6 +26,16 @@
             <Setter Property="BorderBrush" Value="{x:Null}"/>
             <Setter Property="Foreground" Value="#FFF5E9E2"/>
             <Setter Property="Background" Value="#FFD44D5C"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="18,1"/>
+        </Style>
+        <Style TargetType="Button" x:Key="SecondaryButton">
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="#FFD44D5C"/>
+            <Setter Property="Foreground" Value="#FFF5E9E2"/>
+            <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
             <Setter Property="Padding" Value="18,1"/>
         </Style>

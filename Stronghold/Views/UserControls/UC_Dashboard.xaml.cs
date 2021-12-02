@@ -54,6 +54,7 @@ namespace Stronghold.Views.UserControls
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
         {
             windowCreateLandmark.Show();
+            windowCreateLandmark.Activate();
         }
 
         private void SignOutButton_Click(object sender, RoutedEventArgs e)
