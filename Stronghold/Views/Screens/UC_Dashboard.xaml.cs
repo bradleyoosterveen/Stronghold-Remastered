@@ -49,8 +49,6 @@ namespace Stronghold.Views.Screens
                 UC_LandmarkCard landmarkCard = new UC_LandmarkCard(landmark);
 
                 this.LandmarkList.Children.Add(landmarkCard);
-
-                landmarkCard.ViewLandmark += this.OnViewLandmark;
             }
         }
 
@@ -62,11 +60,6 @@ namespace Stronghold.Views.Screens
         public void OnLandmarkCreated(object sender, EventArgs e)
         {
             this.UpdateList();
-        }
-
-        public void OnViewLandmark(object sender, EventArgs e)
-        {
-            
         }
 
         private void NewLandmarkButton_Click(object sender, RoutedEventArgs e)
