@@ -35,7 +35,7 @@ namespace Stronghold.Views.Screens
 
             this.CurrentUsername.Content = Authentication.User.Username;
 
-            this.SubscribeToEvents();
+            this._windowCreateLandmark.LandmarkCreated += this.OnLandmarkUpdated;
 
             this.UpdateList();
         }
@@ -48,16 +48,14 @@ namespace Stronghold.Views.Screens
             {
                 UC_LandmarkCard landmarkCard = new UC_LandmarkCard(landmark);
 
+                landmarkCard.DeleteLandmark += this.OnLandmarkUpdated;
+                landmarkCard.EditLandmark += this.OnLandmarkUpdated;
+
                 this.LandmarkList.Children.Add(landmarkCard);
             }
         }
-
-        public void SubscribeToEvents()
-        {
-            this._windowCreateLandmark.LandmarkCreated += this.OnLandmarkCreated;
-        }
-
-        public void OnLandmarkCreated(object sender, EventArgs e)
+        
+        public void OnLandmarkUpdated(object sender, EventArgs e)
         {
             this.UpdateList();
         }

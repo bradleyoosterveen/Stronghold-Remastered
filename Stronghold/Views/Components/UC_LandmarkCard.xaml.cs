@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controller;
 using Model;
 
 namespace Stronghold.Views.Components
@@ -24,6 +25,8 @@ namespace Stronghold.Views.Components
         public event EventHandler DeleteLandmark;
         public event EventHandler EditLandmark;
 
+        private readonly LandmarkCardController _landmarkCardController = new();
+
         private readonly Landmark _landmark;
 
         public UC_LandmarkCard(Landmark landmark)
@@ -33,6 +36,8 @@ namespace Stronghold.Views.Components
             this._landmark = landmark;
 
             this.SetLabels();
+
+            this.Buttons.Visibility = Visibility.Hidden;
 
             // @TODO: Edit landmark 
             // @TODO: Delete landmark ((StackPanel)this.Parent).Children.Remove(this);
@@ -53,6 +58,13 @@ namespace Stronghold.Views.Components
         private void UserControl_MouseLeave(object sender, MouseEventArgs e)
         {
             this.Buttons.Visibility = Visibility.Hidden;
+        }
+
+        private void DeleteButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            this._landmarkCardController.DeleteLandmark(this._landmark.ID);
+
+            this.DeleteLandmark?.Invoke(this, EventArgs.Empty);
         }
     }
 }
